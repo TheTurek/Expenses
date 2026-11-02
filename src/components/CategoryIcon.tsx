@@ -1,0 +1,120 @@
+import React from 'react';
+import {
+  ShoppingCart,
+  Home,
+  Car,
+  HeartPulse,
+  Film,
+  Wifi,
+  Tag,
+  Utensils,
+  Coffee,
+  Zap,
+  Briefcase,
+  GraduationCap,
+  Plane,
+  Gift,
+  Dumbbell,
+  ShieldCheck,
+  Shirt,
+  Music,
+  Smartphone,
+  Baby,
+  Fuel,
+  Bus,
+  BookOpen,
+  Wrench,
+  PiggyBank,
+  Sparkles,
+  Luggage,
+  Smile,
+  LucideProps,
+} from 'lucide-react';
+
+export const AVAILABLE_ICONS: { id: string; label: string; icon: React.ComponentType<LucideProps> }[] = [
+  { id: 'ShoppingCart', label: 'Zakupy', icon: ShoppingCart },
+  { id: 'Utensils', label: 'Jedzenie / Restauracja', icon: Utensils },
+  { id: 'Coffee', label: 'Kawa / Kawiarnia', icon: Coffee },
+  { id: 'Home', label: 'Dom / Mieszkanie', icon: Home },
+  { id: 'Zap', label: 'Media / Prąd / Gaz', icon: Zap },
+  { id: 'Car', label: 'Samochód', icon: Car },
+  { id: 'Fuel', label: 'Paliwo', icon: Fuel },
+  { id: 'Bus', label: 'Komunikacja miejska', icon: Bus },
+  { id: 'HeartPulse', label: 'Zdrowie / Apteka', icon: HeartPulse },
+  { id: 'Film', label: 'Kino / Rozrywka', icon: Film },
+  { id: 'Music', label: 'Muzyka / Koncerty', icon: Music },
+  { id: 'Wifi', label: 'Internet / Usługi', icon: Wifi },
+  { id: 'Smartphone', label: 'Telefon', icon: Smartphone },
+  { id: 'Shirt', label: 'Odzież / Ubrania', icon: Shirt },
+  { id: 'Dumbbell', label: 'Sport / Siłownia', icon: Dumbbell },
+  { id: 'Plane', label: 'Podróże / Urlop', icon: Plane },
+  { id: 'Luggage', label: 'Wycieczki', icon: Luggage },
+  { id: 'GraduationCap', label: 'Edukacja / Kursy', icon: GraduationCap },
+  { id: 'BookOpen', label: 'Książki', icon: BookOpen },
+  { id: 'Gift', label: 'Prezenty', icon: Gift },
+  { id: 'Briefcase', label: 'Praca / Biuro', icon: Briefcase },
+  { id: 'Baby', label: 'Dziecko', icon: Baby },
+  { id: 'Wrench', label: 'Naprawy / Usługi', icon: Wrench },
+  { id: 'ShieldCheck', label: 'Ubezpieczenia', icon: ShieldCheck },
+  { id: 'PiggyBank', label: 'Oszczędności', icon: PiggyBank },
+  { id: 'Sparkles', label: 'Uroda / Kosmetyki', icon: Sparkles },
+  { id: 'Smile', label: 'Hobby', icon: Smile },
+  { id: 'Tag', label: 'Inne', icon: Tag },
+];
+
+export const CATEGORY_PALETTE = [
+  { name: 'Teal', hex: '#0d9488' },
+  { name: 'Emerald', hex: '#059669' },
+  { name: 'Blue', hex: '#2563eb' },
+  { name: 'Indigo', hex: '#4f46e5' },
+  { name: 'Violet', hex: '#7c3aed' },
+  { name: 'Purple', hex: '#9333ea' },
+  { name: 'Pink', hex: '#db2777' },
+  { name: 'Rose', hex: '#e11d48' },
+  { name: 'Amber', hex: '#d97706' },
+  { name: 'Orange', hex: '#ea580c' },
+  { name: 'Red', hex: '#dc2626' },
+  { name: 'Slate', hex: '#475569' },
+];
+
+const iconMap: Record<string, React.ComponentType<LucideProps>> = {
+  ShoppingCart,
+  Home,
+  Car,
+  HeartPulse,
+  Film,
+  Wifi,
+  Tag,
+  Utensils,
+  Coffee,
+  Zap,
+  Briefcase,
+  GraduationCap,
+  Plane,
+  Gift,
+  Dumbbell,
+  ShieldCheck,
+  Shirt,
+  Music,
+  Smartphone,
+  Baby,
+  Fuel,
+  Bus,
+  BookOpen,
+  Wrench,
+  PiggyBank,
+  Sparkles,
+  Luggage,
+  Smile,
+};
+
+interface CategoryIconProps {
+  iconName: string;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+export const CategoryIcon: React.FC<CategoryIconProps> = ({ iconName, className = 'w-5 h-5', style }) => {
+  const IconComponent = iconMap[iconName] || Tag;
+  return <IconComponent className={className} style={style} />;
+};

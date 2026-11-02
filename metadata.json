@@ -1,0 +1,6 @@
+{
+  "name": "Wydatkomierz - Miesięczny Menedżer Wydatków",
+  "description": "Lokalna aplikacja do ewidencji, podsumowywania i wieloletniej archiwizacji wydatków w dynamicznych kategoriach.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

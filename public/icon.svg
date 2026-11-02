@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Inner subtle glow frame -->
+  <rect x="24" y="24" width="464" height="464" rx="92" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="3" />
+
+  <!-- Main Wallet / Ledger illustration -->
+  <g filter="url(#shadow)" transform="translate(64, 76)">
+    <!-- Back card / document -->
+    <rect x="40" y="30" width="304" height="230" rx="28" fill="#14b8a6" fill-opacity="0.8" />
+    
+    <!-- Primary Wallet Body -->
+    <rect x="20" y="70" width="344" height="250" rx="36" fill="#ffffff" />
+    
+    <!-- Top accent bar of wallet -->
+    <path d="M 20 106 C 20 86 36 70 56 70 L 328 70 C 348 70 364 86 364 106 L 364 126 L 20 126 Z" fill="#0f766e" />
+
+    <!-- Wallet flap -->
+    <path d="M 220 160 L 364 160 C 374 160 380 168 380 178 L 380 232 C 380 242 374 250 364 250 L 220 250 C 200 250 184 230 184 205 C 184 180 200 160 220 160 Z" fill="#0d9488" />
+    
+    <!-- Flap snap / gold coin emblem -->
+    <circle cx="236" cy="205" r="18" fill="#fbbf24" stroke="#d97706" stroke-width="3" />
+    
+    <!-- Spending Growth / Chart glyphs -->
+    <rect x="60" y="245" width="22" height="45" rx="6" fill="#0f766e" fill-opacity="0.8" />
+    <rect x="94" y="215" width="22" height="75" rx="6" fill="#0d9488" fill-opacity="0.9" />
+    <rect x="128" y="180" width="22" height="110" rx="6" fill="#10b981" />
+    
+    <!-- Currency sign 'zł' / PLN badge -->
+    <rect x="56" y="148" width="80" height="28" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" />
+    <text x="96" y="167" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#065f46" text-anchor="middle">PLN / zł</text>
+  </g>
+</svg>
